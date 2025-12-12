@@ -1,0 +1,90 @@
+[gd_scene load_steps=2 format=3 uid="uid://craftingui001"]
+
+[ext_resource type="Script" path="res://scripts/ui/crafting_ui.gd" id="1_craft"]
+
+[node name="CraftingUI" type="CanvasLayer"]
+layer = 20
+script = ExtResource("1_craft")
+
+[node name="Panel" type="Panel" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="TopBar" type="HBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 50.0
+grow_horizontal = 2
+
+[node name="Title" type="Label" parent="Panel/TopBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "  CHẾ TẠO"
+vertical_alignment = 1
+
+[node name="CloseBtn" type="Button" parent="Panel/TopBar"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+text = "X"
+
+[node name="Content" type="HBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 60.0
+offset_right = -10.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="RecipeScroll" type="ScrollContainer" parent="Panel/Content"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RecipeList" type="VBoxContainer" parent="Panel/Content/RecipeScroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 5
+
+[node name="RecipeInfo" type="VBoxContainer" parent="Panel/Content"]
+visible = false
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 10
+
+[node name="RecipeName" type="Label" parent="Panel/Content/RecipeInfo"]
+layout_mode = 2
+text = "Recipe Name"
+
+[node name="HSeparator" type="HSeparator" parent="Panel/Content/RecipeInfo"]
+layout_mode = 2
+
+[node name="IngredientsLabel" type="Label" parent="Panel/Content/RecipeInfo"]
+layout_mode = 2
+text = "Nguyên liệu:"
+
+[node name="IngredientsScroll" type="ScrollContainer" parent="Panel/Content/RecipeInfo"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="IngredientsList" type="VBoxContainer" parent="Panel/Content/RecipeInfo/IngredientsScroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ProgressBar" type="ProgressBar" parent="Panel/Content/RecipeInfo"]
+visible = false
+layout_mode = 2
+max_value = 1.0
+show_percentage = false
+
+[node name="CraftBtn" type="Button" parent="Panel/Content/RecipeInfo"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+text = "CHẾ TẠO"

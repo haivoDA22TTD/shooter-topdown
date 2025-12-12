@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://resource001"]
+
+[ext_resource type="Script" path="res://scripts/resources/resource_node.gd" id="1_res"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1"]
+radius = 20.0
+
+[node name="ResourceNode" type="StaticBody2D"]
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("1_res")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_1")
+
+[node name="InteractionArea" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+shape = SubResource("CircleShape2D_1")

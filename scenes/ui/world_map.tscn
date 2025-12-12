@@ -1,0 +1,85 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/world_map.gd" id="1_worldmap"]
+
+[node name="WorldMap" type="CanvasLayer"]
+layer = 30
+script = ExtResource("1_worldmap")
+
+[node name="Panel" type="Panel" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Title" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 15.0
+offset_right = 200.0
+offset_bottom = 45.0
+text = "WORLD MAP"
+theme_override_font_sizes/font_size = 24
+
+[node name="CloseBtn" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 1200.0
+offset_top = 10.0
+offset_right = 1260.0
+offset_bottom = 50.0
+text = "X"
+
+[node name="EnergyLabel" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 1050.0
+offset_top = 20.0
+offset_right = 1190.0
+offset_bottom = 45.0
+text = "⚡ 100/100"
+horizontal_alignment = 2
+theme_override_font_sizes/font_size = 18
+
+[node name="MapContainer" type="Control" parent="Panel"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 60.0
+offset_right = 640.0
+offset_bottom = 460.0
+
+[node name="LocationInfo" type="Panel" parent="Panel"]
+visible = false
+layout_mode = 0
+offset_left = 680.0
+offset_top = 100.0
+offset_right = 980.0
+offset_bottom = 350.0
+
+[node name="VBox" type="VBoxContainer" parent="Panel/LocationInfo"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = -15.0
+offset_bottom = -15.0
+theme_override_constants/separation = 15
+
+[node name="LocationName" type="Label" parent="Panel/LocationInfo/VBox"]
+layout_mode = 2
+text = "Location Name"
+theme_override_font_sizes/font_size = 20
+
+[node name="HSeparator" type="HSeparator" parent="Panel/LocationInfo/VBox"]
+layout_mode = 2
+
+[node name="LocationDesc" type="Label" parent="Panel/LocationInfo/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Description"
+autowrap_mode = 2
+
+[node name="TravelBtn" type="Button" parent="Panel/LocationInfo/VBox"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+text = "TRAVEL"

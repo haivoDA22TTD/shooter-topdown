@@ -1,0 +1,103 @@
+[gd_scene load_steps=2 format=3 uid="uid://inventoryui001"]
+
+[ext_resource type="Script" path="res://scripts/ui/inventory_ui.gd" id="1_inv"]
+
+[node name="InventoryUI" type="CanvasLayer"]
+layer = 20
+script = ExtResource("1_inv")
+
+[node name="Panel" type="Panel" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="TopBar" type="HBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 50.0
+grow_horizontal = 2
+
+[node name="Title" type="Label" parent="Panel/TopBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "  TÚI ĐỒ"
+vertical_alignment = 1
+
+[node name="CloseBtn" type="Button" parent="Panel/TopBar"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+text = "X"
+
+[node name="Content" type="HBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 60.0
+offset_right = -10.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel/Content"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+
+[node name="GridContainer" type="GridContainer" parent="Panel/Content/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/h_separation = 8
+theme_override_constants/v_separation = 8
+columns = 4
+
+[node name="ItemInfo" type="Panel" parent="Panel/Content"]
+visible = false
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBox" type="VBoxContainer" parent="Panel/Content/ItemInfo"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ItemName" type="Label" parent="Panel/Content/ItemInfo/VBox"]
+layout_mode = 2
+text = "Item Name"
+
+[node name="HSeparator" type="HSeparator" parent="Panel/Content/ItemInfo/VBox"]
+layout_mode = 2
+
+[node name="ItemDesc" type="Label" parent="Panel/Content/ItemInfo/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Item description goes here"
+autowrap_mode = 2
+
+[node name="Buttons" type="VBoxContainer" parent="Panel/Content/ItemInfo/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="UseBtn" type="Button" parent="Panel/Content/ItemInfo/VBox/Buttons"]
+layout_mode = 2
+text = "SỬ DỤNG"
+
+[node name="EquipBtn" type="Button" parent="Panel/Content/ItemInfo/VBox/Buttons"]
+layout_mode = 2
+text = "TRANG BỊ"
+
+[node name="DropBtn" type="Button" parent="Panel/Content/ItemInfo/VBox/Buttons"]
+layout_mode = 2
+text = "VỨT BỎ"

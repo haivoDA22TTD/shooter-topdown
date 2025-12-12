@@ -1,0 +1,70 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/minimap.gd" id="1_minimap"]
+
+[node name="Minimap" type="CanvasLayer"]
+layer = 25
+script = ExtResource("1_minimap")
+
+[node name="Panel" type="Panel" parent="."]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -220.0
+offset_top = -250.0
+offset_right = 220.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 200.0
+offset_bottom = 35.0
+text = "WORLD MAP"
+
+[node name="CloseBtn" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 390.0
+offset_top = 5.0
+offset_right = 435.0
+offset_bottom = 35.0
+text = "X"
+
+[node name="MapTexture" type="TextureRect" parent="Panel"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 45.0
+offset_right = 420.0
+offset_bottom = 445.0
+stretch_mode = 5
+
+[node name="PlayerMarker" type="ColorRect" parent="Panel/MapTexture"]
+layout_mode = 0
+offset_left = 196.0
+offset_top = 196.0
+offset_right = 204.0
+offset_bottom = 204.0
+color = Color(1, 0.8, 0, 1)
+
+[node name="ZoneLabel" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 455.0
+offset_right = 250.0
+offset_bottom = 480.0
+text = "Safe Zone"
+
+[node name="CoordsLabel" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 280.0
+offset_top = 455.0
+offset_right = 420.0
+offset_bottom = 480.0
+text = "X: 0  Y: 0"
+horizontal_alignment = 2

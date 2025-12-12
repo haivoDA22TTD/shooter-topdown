@@ -1,0 +1,37 @@
+[gd_scene load_steps=11 format=3]
+
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_main"]
+[ext_resource type="PackedScene" path="res://scenes/world/game_world.tscn" id="2_world"]
+[ext_resource type="PackedScene" path="res://scenes/ui/hud.tscn" id="3_hud"]
+[ext_resource type="PackedScene" path="res://scenes/ui/inventory_ui.tscn" id="4_inv"]
+[ext_resource type="PackedScene" path="res://scenes/ui/crafting_ui.tscn" id="5_craft"]
+[ext_resource type="PackedScene" path="res://scenes/ui/world_map.tscn" id="6_worldmap"]
+[ext_resource type="Script" path="res://scripts/crafting/crafting_system.gd" id="7_craftsys"]
+[ext_resource type="Script" path="res://scripts/inventory/inventory.gd" id="8_invsys"]
+[ext_resource type="Script" path="res://scripts/world/weather_system.gd" id="9_weather"]
+[ext_resource type="PackedScene" path="res://scenes/ui/pause_menu.tscn" id="10_pause"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_main")
+
+[node name="GameWorld" parent="." instance=ExtResource("2_world")]
+
+[node name="PlayerInventory" type="Node" parent="."]
+script = ExtResource("8_invsys")
+
+[node name="CraftingSystem" type="Node" parent="."]
+script = ExtResource("7_craftsys")
+
+[node name="WeatherSystem" type="CanvasLayer" parent="."]
+layer = 5
+script = ExtResource("9_weather")
+
+[node name="HUD" parent="." instance=ExtResource("3_hud")]
+
+[node name="InventoryUI" parent="." instance=ExtResource("4_inv")]
+
+[node name="CraftingUI" parent="." instance=ExtResource("5_craft")]
+
+[node name="WorldMap" parent="." instance=ExtResource("6_worldmap")]
+
+[node name="PauseMenu" parent="." instance=ExtResource("10_pause")]

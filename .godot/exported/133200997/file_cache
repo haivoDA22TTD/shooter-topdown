@@ -1,0 +1,15 @@
+res://scenes/enemies/zombie_base.tscn::141329492c3aa4a3a4c70139b16fc626::1765508051::res://.godot/exported/133200997/export-b31ff2558f8b406205d6c0fdaddc8cb5-zombie_base.scn
+res://scenes/enemies/zombie_boss.tscn::d3bcae7366eb51e05483cfdc495c1027::1765517754::res://.godot/exported/133200997/export-e5b7f2ab7153375b68cc47392c439df7-zombie_boss.scn
+res://scenes/items/loot_box.tscn::9f914eda5cd2629dd182cb2d0d6af157::1765509946::res://.godot/exported/133200997/export-0218bf6813994096f61d78f9559388af-loot_box.scn
+res://scenes/items/weapon_box.tscn::9b8a280c3f6d4205c1f26b12c81c0919::1765512747::res://.godot/exported/133200997/export-6a927afdebff48a10c1ab288c07347f4-weapon_box.scn
+res://scenes/player/player.tscn::e6707a8fdf11cbf390d0206aa4666961::1765513668::res://.godot/exported/133200997/export-c2c62cb8c73458cd122faf659769dc80-player.scn
+res://scenes/resources/resource_node.tscn::6b74b42594985beb7ddb8dd69747e306::1765506002::res://.godot/exported/133200997/export-7dd8695ca296d177cec8dfe4e011eac9-resource_node.scn
+res://scenes/ui/crafting_ui.tscn::04f31efd85230193184e416a832f97a7::1765513121::res://.godot/exported/133200997/export-3f43ea7c69a650eef6949fd13b9716df-crafting_ui.scn
+res://scenes/ui/hud.tscn::719eff988e58628fe56ea0a4c881887d::1765513143::res://.godot/exported/133200997/export-f26fe175837e58804f1c48b99041ac16-hud.scn
+res://scenes/ui/inventory_ui.tscn::6a60be8f2a3cfdbfea215eda2b96c98a::1765513117::res://.godot/exported/133200997/export-be2dfa4d054a49c239cea37c1a3b3fde-inventory_ui.scn
+res://scenes/ui/minimap.tscn::7b9cd50ce05cee08604dba6ef1a0f385::1765508479::res://.godot/exported/133200997/export-20dac13f77fe18715083fab68caaf167-minimap.scn
+res://scenes/ui/pause_menu.tscn::caf282206446243bebaffcda320d2bb8::1765515220::res://.godot/exported/133200997/export-14114c379f76b1c04097459e2387a1e6-pause_menu.scn
+res://scenes/ui/world_map.tscn::6281b685e12b34c9e1afb728cfb0c07b::1765508929::res://.godot/exported/133200997/export-def8d4084c361514b0e9964601e7c111-world_map.scn
+res://scenes/world/game_world.tscn::d81258fa5ad3276e86ac556d56cd6ad1::1765505948::res://.godot/exported/133200997/export-ec88c4044e6a8913bb715de9fd89d93c-game_world.scn
+res://scenes/main.tscn::0a7c27f19d28461689c006a320cb1c00::1765515042::res://.godot/exported/133200997/export-3ad5c15c4f3250da0cc7c1af1770d85f-main.scn
+res://scenes/node_2d.tscn::54b431451513d3439b023c8e870c2316::1765506370::res://.godot/exported/133200997/export-7936cb3314e92baa208a95fc6f151298-node_2d.scn
